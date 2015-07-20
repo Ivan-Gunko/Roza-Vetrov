@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>kurort</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/css-reset/reset.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- endbuild -->
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=tLcseVnMefjaoS8WTn9EeXLNY1U0TSsj&id=map"></script>
+</head>
+<body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <noscript>
+        <p>В браузере отключен javascript!</p>
+    </noscript>
+
+    <div class="container">
+
+<!-- start: header -->
+        <header class="header">
+            <div class="head__wrap">
+             <div class="head__container head__container--logo">
+                 <div class="logo">
+                     <div class="logo logo__img">
+                         <img src="images/logo.png" alt="kurort-logistik">
+                     </div>
+                     <div class="logo logo__title">Курорт<br> Логистик<br>
+                     <span>туристическая фирма</span></div>
+                 </div>
+             </div>
+             <div class="head__container head__container--action">
+                 <div class="info info__action"><a href="#"><img src="images/icon-interest.png" height="35" width="35" alt="%">Акции</a></div>
+                 <a href="#" class="button button--yelow">Бесплатное бронирование</a>
+             </div>
+             <div class="head__container head__container--schedule">
+                 <div class="info info__phone"><img src="images/icon-phone.png" height="35" width="35" alt="phone">
+                 <p>Консультации по
+                 телефону <br><br>
+                 с <strong>8.00</strong> до <strong>20.00<br>
+                     без выходных</strong>
+                 </p></div>
+             </div>
+             <div class="head__container head__container--phone">
+                <div class="info info__phone--free"> 8 (800) <span class="black">767-98-76</span></div>
+                <p>бесплатный звонок по России</p>
+                <a href="#" class="button button--width-fix button--yelow">Заказать звонок</a>
+             </div>
+         </div>
+
+     </header>
+        <!-- end: header -->
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="#">О турфирме <i class="fa fa-caret-down"></i></a>
+                    <ul class="subcategory">
+                        <li><a href="sanatory.html">Документы</a></li>
+                        <li><a href="question.html">Новости</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Полезная информация</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Путевки в санатории <i class="fa fa-caret-down"></i></a>
+                    <ul class="subcategory">
+                        <li><a href="sanatory.html">Пятигорск</a></li>
+                        <li><a href="sanatory.html">Железноводск</a></li>
+                        <li><a href="sanatory.html">Ессентуки</a></li>
+                        <li><a href="sanatory.html">Кисловодск</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Отдых в горах <i class="fa fa-caret-down"></i></a>
+                    <ul class="subcategory">
+                        <li><a href="sanatory.html">Архыз</a></li>
+                        <li><a href="sanatory.html">Тиберда</a></li>
+                        <li><a href="sanatory.html">Домбай</a></li>
+                        <li><a href="sanatory.html">Приэльбрусье</a></li>
+                    </ul>
+                </li>
+                <li><a href="reservation.html">Отзывы</a></li>
+                <li><a href="question.html">Задать вопрос</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+            <div class="content__wrap">
+                <div class="content__desc content__desc--p25">
+                    <h4>Бесплатная служба бронирования</h4>
+                    <div class="tabs">
+                        <ul>
+                            <li class="tab tab--img tab--sanatorium active">Санатории КМВ</li>
+                            <li class="tab tab--img tab--mountains">Отдых в горах</li>
+                            <li class="tab tab--img tab--sea">Отдых на море</li>
+                            <li class="tab tab--img tab--leisure">Активный отдых</li>
+                        </ul>
+                    </div>
+                    <div class="reservation">
+                        <form action="#">
+                            <p>
+                                Если вы не определились с выбором конкретного санатория, выберите то, что для вас важно и<br> наши менеджеры подберут подходящие для вас варианты
+                            </p>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="select1">По профилю</label>
+                                <select placeholder="Выберете категорию" name="select1" multiple="multiple" id="opt-category" class="chosen-select">
+
+                                    <option value="1" title="SPA" name="spa">SPA</option>
+                                    <option value="2"  title="Аллергология">Аллергология</option>
+                                    <option value="3"  title="ЖКТ">ЖКТ</option>
+                                    <option value="4"  title="Общеоздоровительная">Общеоздоровительная</option>
+                                    <!-- <option value="5"  title="Желудочно-кишечный тракт">Желудочно-кишечный тракт</option>
+                                    <option value="6"  title="Желчевыводящая система">Желчевыводящая система</option>
+                                    <option value="7"  title="Заболевание печени">Заболевание печени</option>
+                                    <option value="8"  title="Зрительная система">Зрительная система</option>
+                                    <option value="9"  title="Иммунная система">Иммунная система</option>
+                                    <option value="10" title="Костно-мышечная система">Костно-мышечная система</option>
+                                    <option value="11" title="Лимфатическая система">Лимфатическая система</option>
+                                    <option value="12" title="ЛОР">ЛОР</option>
+                                    <option value="13" title="Мочеполовая система">Мочеполовая система</option>
+                                    <option value="14" title="Нервная система">Нервная система</option>
+                                    <option value="15" title="Обмен веществ">Обмен веществ</option>
+                                    <option value="16" title="Общетерапивтический">Общетерапивтический</option>
+                                    <option value="17" title="Опорно-двигательная система">Опорно-двигательная система</option>
+                                    <option value="18" title="Педиатрия">Педиатрия</option>
+                                    <option value="19" title="Пищеварительная система">Пищеварительная система</option>
+                                    <option value="20" title="Покровная система">Покровная система</option>
+                                    <option value="21" title="Сахарный диабет">Сахарный диабет</option>
+                                    <option value="22" title="Сердечно-сосудистая система">Сердечно-сосудистая система</option>
+                                    <option value="23" title="Урология">Урология</option>
+                                    <option value="24" title="Эндокринная система">Эндокринная система</option> -->
+                                </select>
+                            </div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="range__slider">По цене за сутки, руб</label>
+                                <input type="text" id="range__slider" name="range__slider" value="" />
+                            </div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="city">Выберите город</label>
+                                <select name="city" id="city" class="chosen-select">
+                                    <option>Все города</option>
+                                    <option>Пятигорск</option>
+                                    <option>Кисловодск</option>
+                                    <option>Ессентуки</option>
+                                    <option>Железноводск</option>
+                                </select>
+                            </div>
+                            <div class="row__separator"></div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="sanatorium">Выберете санаторий</label>
+                                <select placeholder="Выберете категорию" name="sanatorium" id="sanatorium" class="chosen-select">
+                                    <option>Пятигорский нарзан</option>
+                                    <option>Кисловодск</option>
+                                    <option>Ессентуки</option>
+                                    <option>Железноводск</option>
+                                </select>
+                            </div>
+                            <div class="reserve__block reserve__block--inline67">
+                                <div class="reserve__desc clearfix">
+                                    <img src="images/sanatorium-news.jpg" alt="foto" class="img--border fl-l">
+                                    <h4>Санаторий Пятигорский Нарзан</h4> 
+                                    <p>                                          
+                                        <span class="desc__cost">от 4000 руб./сутки</span><br>
+                                        <span class="desc__feedback"><a href="#">Читать отзывы</a> (16)</span>
+                                    </p>
+                                    <p class="desc__tags">
+                                        Лечение по направлениям:
+                                        <a href="#">Санаторно-курортное</a>,
+                                        <a href="#">Аллерголоия</a>,
+                                        <a href="#">Гинекология</a>,
+                                        <a href="#">Дыхательная Система</a>,
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row__separator"></div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="datepicker">Дата заезада/выезда</label>
+                                <input type="text" id="datepicker1" name="datepicker1">
+                                <input type="text" id="datepicker2" name="datepicker2">
+                            </div>
+                            <div class="reserve__block reserve__block--inline28">
+                                <label for="apartaments">Тип номера</label>
+                                <select placeholder="Выберете номер" name="apartaments" id="apartaments" class="chosen-select">
+                                    <option>Пятизвездочный</option>
+                                    <option>Люкс</option>
+                                    <option>Полулюкс</option>
+                                    <option>Бизнесс-класс</option>
+                                </select>
+                            </div>
+                            <div class="reserve__block reserve__block--inline38">
+                                <div class="input__wrap">
+                                    <label for="parents">Взрослых</label>
+                                    <input type="text" id="parents" name="parents" class="input__number">
+                                </div>
+                                <div class="input__wrap">
+                                    <label for="shilds">Детей, до 14 лет</label>
+                                    <input type="text" id="shilds" name="shilds" class="input__number">
+                                </div>
+                            </div>
+                            <div class="row__separator"></div>
+                            <p class="reserve__person">Контактные данные</p>
+                            <div class="reserve__block reserve__block--inline33">
+                                <input type="text" id="name" name="name" placeholder="Как вас зовут?" class="input__columm">
+                                <label for="name" class="hide"></label>
+                                <input type="text" id="phone" name="phone" placeholder="Номер телефона" class="input__columm">
+                                <label for="phone" class="hide"></label>
+                                <input type="text" id="e-mail" name="e-mail" placeholder="E-mail" class="input__columm">
+                                <label for="e-mail" class="hide"></label>
+                            </div>
+                            <div class="reserve__block reserve__block--inline67">
+                                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+                            </div>
+                            <div class="row__separator"></div>
+                            <div class="reserve__block reserve__block--inline33"></div>
+                            <div class="reserve__block reserve__block--inline67">
+                                <button type="submit" class="button button--green">Запросить расчет</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content__wrap">
+                <div class="adv margin-bottom">
+                    <div class="adv__container adv__container--bold">
+                        <div class="adv__desc adv__desc--first"></div>
+                        <p>Индивидуальный подход к каждому гостю</p>
+                        <span class="adv__separator"></span>
+                    </div>
+
+                    <div class="adv__container adv__container--bold">
+                        <div class="adv__desc adv__desc--two"></div>
+                        <p>Бесплатная отмена брони</p>
+                        <span class="adv__separator"></span>
+                    </div>
+
+                    <div class="adv__container adv__container--bold">
+                        <div class="adv__desc adv__desc--three"></div>
+                        <p>Бесплатный трансфер</p>
+                        <span class="adv__separator"></span>
+                    </div>
+                    <div class="adv__container adv__container--bold">
+                        <div class="adv__desc adv__desc--fourth"></div>
+                        <p>Официальные цены санаториев</p>
+                    </div>
+                </div>
+            </div>
+
+<footer>
+        <div class="footer">
+            <div class="logo">
+                <div class="logo logo__img">
+                    <img src="images/logo.png" alt="kurort-logistik">
+                </div>
+                <div class="logo logo__social">
+                    <a href="#" class="social social--fb"></a>
+                    <a href="#" class="social social--tw"></a>
+                    <a href="#" class="social social--vk"></a>
+                    <a href="#" class="social social--od"></a>
+                </div>
+            </div>
+            <div class="advice">
+                <div class="f__title">
+                    <h6>Консультации по всем вопросам</h6>
+                </div>
+                <div class="advice__phone">
+                    8 (800) <span>767-98-76</span>
+                </div>
+                <div class="advice__buttons">
+                    <p>
+                       <a href="#" class="button button--width-fix button--blue">Заказать звонок</a>
+                       <a href="#" class="advice__link">Задать вопрос</a> 
+                   </p>
+                   <p>
+                       <a href="#" class="button button--width-fix button--green">Забронировать</a>
+                       <a href="#" class="advice__link">Написать отзыв</a> 
+                   </p>
+               </div>
+           </div>
+           <div class="f__lists">
+           <li></li>
+                <div class="f__list">
+                    <div class="f__title">
+                        <h6>Компания</h6>
+                    </div>
+                    <ul>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Услуги</a></li>
+                    </ul>
+                </div>
+                <div class="f__list">
+                    <div class="f__title">
+                        <h6>Санатории</h6>
+                    </div>
+                    <ul>
+                        <li><a href="#">Пятигорск</a></li>
+                        <li><a href="#">Кисловодск</a></li>
+                        <li><a href="#">Ессентуки</a></li>
+                        <li><a href="#">Железноводск</a></li>
+                    </ul>
+                </div>
+                <div class="f__list">
+                    <div class="f__title">
+                        <h6>Горный отдых</h6>
+                    </div>
+                    <ul>
+                        <li><a href="#">Архыз</a></li>
+                        <li><a href="#">Тиберда</a></li>
+                        <li><a href="#">Домбай</a></li>
+                        <li><a href="#">Приэльбрус</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="f__copyright">
+            <div class="f__wrap">
+                <span>Имеются противопоказания. Необходима консультация специалистов</span>
+                <span class="copyright fl-r">Разработка сайта — WebElement</span>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+</div>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+
+
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+
+
+<!-- build:js scripts/vendor.js -->
+<script src="scripts/searchableOptionList.js"></script>
+<script src="scripts/ion.rangeSlider.min.js"></script>
+<script src="scripts/jquery-ui.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js">
+
+    <!-- endbuild -->
+
+    <!-- build:js scripts/placeholder-ie9.js -->
+    <script src="scripts/placeholder-ie9.js"></script>
+    <!-- endbuild -->
+
+
+<!--[if lt IE 10]>
+    <script src="scripts/placeholder-ie9.js"></script>
+     <script>
+        $('input, textarea').placeholder();
+     </script> 
+     <![endif]-->
+
+     <script>
+        $('#opt-category').searchableOptionList({
+            maxHeight: '350px',
+            maxWidth: '245px',
+            texts : {
+                noItemsAvailable: 'No entries found',
+                selectAll: 'Выбрать всё',
+                selectNone: 'Снять всё',
+                quickDelete: '&times;',
+                searchplaceholder: 'Выберете профиль'
+            },
+            showSelectionBelowList: true,
+        });
+        $('#city').searchableOptionList({
+            maxHeight: '350px',
+            maxWidth: '245px',
+            texts : {
+                noItemsAvailable: 'No entries found',
+                selectAll: 'Выбрать всё',
+                selectNone: 'Снять всё',
+                quickDelete: '&times;',
+                searchplaceholder: 'Все города'
+            },
+            showSelectionBelowList: true,
+            radioDisable: true
+        });
+        $('#sanatorium').searchableOptionList({
+            maxHeight: '350px',
+            maxWidth: '245px',
+            showSelectionBelowList: true,
+            radioDisable: true
+        });
+        $('#apartaments').searchableOptionList({
+            maxHeight: '350px',
+            maxWidth: '245px',
+            showSelectionBelowList: true,
+            radioDisable: true
+        });
+        $('#range__slider').ionRangeSlider({
+            type: "double",
+            min: 2000,
+            max: 11000,
+            from: 3000,
+            to: 10000,
+            step: 10,
+            force_edges: true,
+            hide_min_max: true
+        });
+        $( "#datepicker2, #datepicker1" ).datepicker({
+            buttonImage:'/images/calendar_ico.png',
+            showOn:'button',
+            buttonImageOnly:true,
+        });
+    </script>
+
+
+
+</body>
+</html>

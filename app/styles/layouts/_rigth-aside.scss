@@ -1,0 +1,27 @@
+.aside {
+	@include e('rigth') {
+		width: 235px;
+		margin-left: 40px;
+
+		& > * {
+			@extend .theme-window;
+			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 33px;
+			}
+		}
+
+		img {
+			border: 2px solid #fff;
+		}
+
+		button {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+
+		& > a {
+			display: block;
+		}
+	}
+}

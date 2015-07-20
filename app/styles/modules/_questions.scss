@@ -1,0 +1,77 @@
+.questions {
+	@extend .align-left;
+	color: #fff;
+	background: url(/images/question.jpg) 0 0 no-repeat;
+	height: 177px;
+	border-radius: 5px;
+	margin-top: 40px;
+
+	@include m('form') {
+		height: 250px;
+		background: url(/images/question-form.jpg) 0 0 no-repeat;
+	}
+
+	@include e('number') {
+		font-size: 1.6em;
+		padding-bottom: 15px;
+	}
+
+	@include e('block') {
+		@extend .inline-block-vtop;
+
+		padding: 25px 40px;
+
+		@include m('nomg') {
+			padding: 25px 0;
+		}
+
+		@include m('form') {
+			@extend .inline-block-vtop;
+			padding-left: 35px;
+		}
+
+		&:first-child {
+			a {
+				color: $clr-green-list;
+			}
+		}
+	}
+
+	.button {
+		padding: 13px 20px;
+		margin-top: 10px;
+	}
+
+	@include e('form') {
+		h5 {
+			padding: 28px 37px 8px 37px;
+		}
+		input, textarea {
+			padding: 3px 10px;
+			margin: 10px 0;
+		}
+		input {
+			margin-left: 12px;
+			width: 215px;
+		}
+		textarea {
+			height: 80px;
+			width: 480px;
+			overflow: auto; // for ie
+		}
+		label {
+			display: inline-block;
+			width: 70px;
+		}
+		label[for="message"] {
+			vertical-align: top;
+			padding-top: 20px;
+		}
+		.button {
+		padding: 10px 20px;
+		line-height: 1em;
+		margin-top: 0;
+		margin-left: 75px;
+		}
+	}
+}

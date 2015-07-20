@@ -1,0 +1,102 @@
+.desc {
+	@include e('main') {
+		@extend .inline-block-vtop;
+		@extend .theme-window;
+
+		width: 68%;
+		padding: 20px;		
+	}
+
+	@include e('title') {
+		h4 {
+			font-size: 28px;
+		}
+	}
+
+	@include e('sort') {
+		font-size: 13px;
+		margin: 10px 0;
+
+		.active,
+		.active:hover,
+		.active:focus {
+			color: $clr-green;
+			border-bottom: 0;
+		}
+
+		a,
+		a:hover,
+		a:focus {
+			margin: 0 3px;
+			text-decoration: none;
+			border-bottom: 1px dotted;
+		}
+
+		i {
+			color: $clr-green;
+			font-family: 'FontAwesome';
+			padding: 0 2px;
+		}
+
+		.wrap {
+			margin-right: 20px;
+		}
+	}
+
+	@include e('sortlink') {
+		
+		@include m('up') {i:before {content: "\f077"}}
+		@include m('down') {i:before {content: "\f078"}}
+	}
+
+	@include e('wrap') {
+		padding-top: 20px;
+
+		img {
+			margin-right: 20px;
+		}
+
+		p {
+			line-height: 1.5em;
+		}
+	}
+
+	@include e('cost') {
+		font-size: 22px;
+	}
+
+	@include e('feedback') {
+		@extend .desc__tags;
+	}
+
+	@include e('tags') {
+		@extend .desc__tags;
+		color: $clr-text-gray;
+		font-size: 13px;
+		a {
+			text-decoration: underline;
+		}
+		a:hover {
+			color: $clr-gray;
+		}
+	}
+
+	@include e('wrap') {
+		margin-bottom: 20px;
+
+		h4 {
+			font-size: 22px;
+			color: $clr-blue-midle;
+		}
+
+		p {
+			padding: .5em 0;
+		}
+	}
+
+	@include e('btn') {
+		display: block;
+		padding: 0;
+		text-align: right;
+	}
+}

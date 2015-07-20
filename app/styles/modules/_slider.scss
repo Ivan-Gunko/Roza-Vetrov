@@ -1,0 +1,44 @@
+.slider {
+	margin-top: -265px;
+	margin-bottom: -260px;
+	width: inherit;
+	height: 810px;
+	overflow: hidden;
+
+	ul {
+		width: 10000px;
+	}
+
+	li {
+		background-image: url(/images/bg_1920.jpg);
+		float: left;
+		height: 805px;
+		position: absolute;
+		width: 100%;
+		overflow: hidden;
+		min-width: 1024px;
+	}
+
+	@include e('btn') {
+		position: absolute;
+		background: url(/images/slider-nav.png) 0 0 no-repeat;
+		top: 450px;
+		width: 34px;
+		height: 86px;
+
+		@include m('next') {
+			right: 0;
+		}
+
+		@include m('prev') {
+			left: 0;
+			background-position: -37px 0;
+		}
+	}
+
+	img {
+		height: 100%;
+		width: 1920px;
+		max-width: 1920px;
+	}
+}

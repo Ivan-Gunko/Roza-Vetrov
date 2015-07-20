@@ -1,0 +1,106 @@
+.carousel {
+    position: relative;
+    height: 85px;
+    margin-top: 30px;
+
+    @include e('wrapper') {
+         position: absolute;
+    }
+    @include e('swither') {
+        height: 75px;
+        left: 45px;
+        bottom: 20px;
+        overflow: hidden;
+        position: absolute;
+        width: 92%;
+    }
+    @include e('item') {
+        box-sizing: border-box;
+        float: left;
+        height: 80px;
+        padding: 0px 5px;
+    }
+    @include e('nav') {}
+
+    @include e('btn') {
+        position: absolute;
+        background: url(/images/slider-nav-small.png) 0 0 no-repeat;
+        width: 22px;
+        height: 55px;
+
+        @include m('next') {
+            right: 0;
+        }
+
+        @include m('prev') {
+            left: 0;
+            background-position: -26px 0;
+        }
+    }
+}
+
+// .slider {
+//     @extend .section-default;
+//     background-color: $clr-white;
+//     height: 230px;
+//     margin-bottom: 1em;
+//     position: relative;
+//     text-align: center;
+
+//         @include e('title') {
+//             padding: 10px 20px 0;
+//             text-align: left;
+//         }
+
+//         @include e('wrapper') {
+//             position: absolute;
+//         }
+
+//         @include e('swither') {
+//             bottom: 20px;
+//             height: 185px;
+//             left: 20px;
+//             overflow: hidden;
+//             position: absolute;
+//             width: 620px;
+//          }
+         
+//          & a:hover,
+//          & a:focus {
+//             text-decoration: none;
+//          }
+// }
+// .swither {
+//     @include e('item') {
+//         background-color: $clr-white;
+//         box-sizing: border-box;
+//         float: left;
+//         height: 150px;
+//         padding: 0px 15px;
+//         width: 150px;
+//     }
+
+//     @include e('item img') {
+//         cursor: pointer;
+//         height: 80%;
+//         transition-duration: .3s;
+//     }
+
+//     @include e('item p') {
+//         font-size: .8em;
+//         line-height: 1em;
+//     }
+// }
+// .nav {
+//     bottom: 5px;
+//     font-size: 1.3em;
+//     position: absolute;
+
+//     @include m('next') {
+//         right: 10px
+//     }
+
+//     @include m('prev') {
+//         right: 35px
+//      }
+// }

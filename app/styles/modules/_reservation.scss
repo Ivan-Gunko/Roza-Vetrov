@@ -1,0 +1,117 @@
+.container {
+	&.container--bg-sea {
+		background: url(/images/bg-sea.jpg) 0 0 no-repeat;
+	}
+}
+.reservation {
+	background: url(/images/form-bg.jpg) 0 0 no-repeat;
+	margin-top: 20px;
+	border-radius: 5px;
+	color: #eee;
+
+	@include m('lite') {
+		background: url(/images/form-bg-lite.jpg) 0 0 no-repeat;
+		color: $clr-text-default;
+	}
+
+	form > p {
+		padding: 20px 35px 0;
+		line-height: 1.5em;
+	}
+}
+.reserve {
+	@include e('block') {
+		@extend .inline-block-vtop;
+
+		padding: 10px 35px;
+		box-sizing: border-box;
+
+		& > label,
+		.input__wrap label {
+			display: block;
+			padding: 15px 0;
+		}
+
+		textarea {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px;
+			height: 145px;
+			overflow-y: auto; //for ie9
+		}
+
+		button {
+			line-height: 1em;
+			padding: 15px 30px;
+			font-size: 1.1em;
+		}
+
+		@include m('inline28') {width: 28%}
+		@include m('inline33') {width: 33%}
+		@include m('inline38') {width: 38%}
+		@include m('inline50') {width: 50%}
+		@include m('inline67') {width: 67%}
+	}
+	
+	@include e('desc') {
+		@extend .theme-window;
+		margin: 10px 0;
+		padding: 20px;
+
+		img {
+			padding-right: 20px;
+		}
+
+		h4 {
+			font-size: 20px;
+			color: $clr-blue-midle;
+		}
+
+		span {
+			color: $clr-text-default;
+		}
+		.desc__cost {
+			line-height: 2.7em;
+		}
+
+		.desc__tags {
+			position: relative;
+			bottom: 0;
+		}
+	}
+}
+.hasDatepicker {
+	width: 115px;
+	margin-right: -25px;
+}
+#datepicker2 {
+	margin-left: 15px;
+}
+.ui-datepicker-trigger {
+	margin-right: 5px;
+	padding-top: 8px;
+    vertical-align: top;
+}
+.input {
+	@include e('number') {
+		width: 125px;
+	}
+
+	@include e('wrap') {
+		@extend .inline-block-vtop;
+		width: 50%;
+		box-sizing: border-box;
+
+		&:last-child {
+			padding-left: 30px;
+		}
+	}
+
+	@include e('columm') {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
+.sol-label-text {
+	color: $clr-text-default;
+}

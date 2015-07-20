@@ -1,0 +1,59 @@
+.adv {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1024px;
+    @include e('separator') {
+        position: absolute;
+        right: -20px;
+        height: 90px;
+        border-left: 3px solid rgba(0, 0, 0, 0.07);
+        top: 25%;
+  }
+
+  @include e('container') {
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    height: 186px;
+    width: 186px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 30px;
+
+    @include m('circle') {
+     border-radius: 93px;
+     background-color: rgba(255, 255, 255, 0.75);
+     & > * {
+      width: 75%;
+  }
+}
+
+@include m('bold') {
+    font-weight: bold;
+    line-height: 1.4em;
+    width: 205px;
+    margin: 0 20px;
+}
+
+& > * {
+    margin: 0 auto;
+}
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    color: $clr-gray-text;
+}
+
+@include e('desc') {
+    height: 115px;
+    width: 90px;
+    background: url(/images/icons-big.png) 0px 0px no-repeat;
+
+    @include m('first') {background-position: 17px 22px;}
+    @include m('two') {background-position: -80px 22px;}
+    @include m('three') {background-position: -177px 22px;}
+    @include m('fourth') {background-position: -280px 22px;}
+}
+}

@@ -1,0 +1,17 @@
+aside {
+	display: inline-block;
+	text-align: left;
+	width: 210px;
+
+	&>.content__cards {
+		margin-right: 10px;
+	}
+
+}
+
+.aside {
+	@include e('title') {
+		font-size: 22px;
+		line-height: 3em;
+	}
+}

@@ -1,0 +1,19 @@
+.san {
+	@include e('desc') {
+		margin: 0 40px 0 25px;
+		padding: 25px 0;
+		line-height: 1.5em;
+
+		img {
+			@include clearfix;
+			margin-right: 30px;
+		}
+	}
+
+	@include e('tabs') {
+		@extend .inline-block-vtop;
+		
+		width: 785px;
+	}
+}
+

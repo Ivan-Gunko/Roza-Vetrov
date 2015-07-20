@@ -1,0 +1,165 @@
+.browserupgrade {
+    position: absolute;
+    color: red;
+    z-index: 9999;
+}
+.blur {
+    -moz-filter: blur(5px);
+    -webkit-filter: blur(5px);
+    background: inherit;
+    filter: blur(5px);
+    filter: url('#blur'); /* путь к svg */
+    height: 210px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.tabs {
+    margin-top: 23px;
+    position: relative;
+
+    ul {
+        @extend .align-center;
+        // text-align: center;
+    }
+}
+.tab {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: $clr-gray;
+    color: $clr-tetx-lite;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+    cursor: pointer;
+
+    @include m('img') {
+        &:before {
+            padding: 5px 35px 5px 0;
+            content: "";
+            background: url(/images/icons-medium.png) -11px -12px no-repeat;
+        }
+    }
+
+    &.active {
+        background-color: $clr-green-active;
+        color: #eee;
+    }
+    @include m('transparency') {
+        background-color: rgba(255, 255, 255, 0);
+        color: $clr-text-default;
+        font-weight: bold;
+        p {
+            border-bottom: 1px solid $clr-green-active;
+            line-height: .4em;
+        }
+    }
+    @include e('desc') {
+        @extend .content__desc;
+
+        font-size: 13px;
+        line-height: 1.6em;
+        margin-top: 0;
+        padding: 30px 35px;
+        min-height: 380px;
+    }
+
+    @include m('sanatorium') { &:before {background-position: -11px -12px;}}
+    @include m('mountains') { &:before {background-position: -50px -12px;}}
+    @include m('sea') { &:before {background-position: -96px -12px;}}
+    @include m('leisure') { &:before {background-position: -142px -12px;}}
+}
+
+.social {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url(/images/icon-social.png) 0 0 no-repeat;
+
+    @include m('fb') {background-position: 0 0;}
+    @include m('tw') {background-position: -22px 0;}
+    @include m('vk') {background-position: -45px 0;}
+    @include m('od') {background-position: -65px 0;}
+}
+
+.container {background: $clr-bg url(/images/bg_1920_crop.jpg) 0 0 no-repeat;}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + .sol-label-text:before,
+input[type="checkbox"] + label:before {
+    background:  url(/images/checkbox.png) -16px 0 no-repeat;
+    content: ' ';
+    cursor:pointer;
+    display:inline-block;
+    height: 14px;
+    margin: -1px 15px 0 0;
+    vertical-align:middle;
+    width: 14px;
+}
+
+input[type="checkbox"]:checked + .sol-label-text:before,
+input[type="checkbox"]:checked + label:before {
+    content: ' ';
+    background-position: 0 0;
+}
+
+.img {
+    @include m('border') {
+        border-radius: 5px;
+    }
+}
+
+.theme-window {
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.17);
+    background-color: #fff;
+}
+
+.btn {
+    @include m('arrow') {
+        position: relative;
+        &:before {
+            content: " ";
+            background: url(/images/arrow-button.png) 0 0 no-repeat;
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 10px;
+        }
+    }
+}
+
+.phone-ico {
+    color: $clr-tetx-lite;
+    border: 2px solid currentColor;
+    padding: 2px 4px;
+    border-radius: 20px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.row {
+    @include e('separator') {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+        box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.black {
+    color: #000;
+}
+.slider__btn,
+.slide__desc,
+.adv,
+.tabs {
+    z-index: 10;
+}

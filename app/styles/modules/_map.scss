@@ -1,0 +1,8 @@
+.map {
+	height: 300px;
+
+	@include m('border') {
+		border: 2px solid #fff;
+		border-radius: 5px;
+	}
+}
