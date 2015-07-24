@@ -1,5 +1,6 @@
 .header{
 	position: relative;
+	
 	z-index: 50;
 	// background-color: rgba(253, 252, 252, 0.25);
 	background: url(/images/header-bg.png) 0 0 repeat-x;
@@ -8,8 +9,9 @@
 .head {
 	@include e('wrap') {
 		padding: 50px 0 35px;
-		width: 1024px;
+		width: 1000px;
 		margin: 0 auto;
+		position: relative;
 	}
 
 	@include e('container') {
@@ -19,11 +21,12 @@
 		vertical-align: top;
 		
 		@include m('logo') {
-			padding: 0 7px;
+			width: 28%;
 		}
 
 		@include m('action') {
-			margin-left: 30px;
+			margin-left: 3%;
+			// width: 23%
 		}
 
 		@include m('schedule') {
@@ -33,14 +36,15 @@
 
 			 img {
 			 	vertical-align: top;
-			 	padding: 1px 5px 0 15px;
+			 	padding-right: 5px;
 			 }
 		}
 
 		@include m('phone') {
 			padding: 10px 0 10px 22px;
 			text-align: center;
-			width: 225px;
+			position: absolute;
+			right: 0;
 
 			p {
 				font-size: .85em;
@@ -57,7 +61,7 @@
 	@include e('img') {}
 
 	@include e('title') {
-		padding: 16px 0 0 10px;
+		padding: 16px 0 0 5px;
 		vertical-align: top;
 		font-family: 'IzhitsaRegular' , arial;
 		font-size: 28px;
@@ -110,10 +114,12 @@
 	box-sizing: border-box;
 	height: 60px;
 	margin: 0 auto;
-	padding: 10px 15px;
+	padding: 13px 0px;
 	position: relative;
 	width: 1000px;
 	z-index: 15;
+	text-align: center;
+	font-size: .9em;
 
 	&>ul {
 		& > * + * {
@@ -123,7 +129,7 @@
 		& > li {
 			position: relative;
 			display: inline-block;
-			padding: 10px 20px;
+			padding: 10px 15px;
 			height: 100%
 		}
 	}
@@ -131,7 +137,7 @@
 	li.active {
 		background-color: $clr-green-medium;
 		border-radius: 10px;
-		padding-bottom: 15px;
+		padding-bottom: 14px;
 	}
 
 	a,
@@ -150,13 +156,14 @@
 	}
 }
 .subcategory {
+	text-align: left;
 	background-color: $clr-green-medium;
 	border-bottom: 2px solid $clr-green;
 	border-radius: 10px;
 	left: 0;
 	padding: 15px;
 	position: absolute;
-	top: 40px;
+	top: 37px;
 	width: 200px;
 	z-index: 15;
 

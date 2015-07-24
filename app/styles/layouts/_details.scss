@@ -17,12 +17,11 @@
 }
 
 .tabs {
-    margin-top: 23px;
+    margin-top: 20px;
     position: relative;
 
     ul {
         @extend .align-center;
-        // text-align: center;
     }
 }
 .tab {
@@ -83,7 +82,12 @@
     @include m('od') {background-position: -65px 0;}
 }
 
-.container {background: $clr-bg url(/images/bg_1920_crop.jpg) 0 0 no-repeat;}
+.container {
+    background: $clr-bg url(/images/bg_1920_crop.jpg) 0 0 no-repeat;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
 
 input[type="checkbox"] {
     display:none;
@@ -96,9 +100,9 @@ input[type="checkbox"] + label:before {
     cursor:pointer;
     display:inline-block;
     height: 14px;
-    margin: -1px 15px 0 0;
+    margin: -1px 12px 0 0;
     vertical-align:middle;
-    width: 14px;
+    width: 15px;
 }
 
 input[type="checkbox"]:checked + .sol-label-text:before,

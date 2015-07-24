@@ -13,5 +13,6 @@ aside {
 	@include e('title') {
 		font-size: 22px;
 		line-height: 3em;
+		margin-bottom: 5px;
 	}
 }

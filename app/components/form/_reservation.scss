@@ -82,19 +82,15 @@
 }
 .hasDatepicker {
 	width: 115px;
-	margin-right: -25px;
+	background: #fff url(/images/calendar_ico.png) 90px 9px no-repeat;
+	cursor: pointer;
 }
 #datepicker2 {
-	margin-left: 15px;
-}
-.ui-datepicker-trigger {
-	margin-right: 5px;
-	padding-top: 8px;
-    vertical-align: top;
+	margin-left: 9px;
 }
 .input {
 	@include e('number') {
-		width: 125px;
+		width: 120px;
 	}
 
 	@include e('wrap') {
@@ -103,7 +99,9 @@
 		box-sizing: border-box;
 
 		&:last-child {
-			padding-left: 30px;
+			* {
+				float: right;
+			}
 		}
 	}
 

@@ -1,97 +1,19 @@
-<!doctype html>
-<html lang="">
-<head>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>kurort</title>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+@@include('../components/head/head.html')
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/css-reset/reset.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css" />
-    <!-- endbuild -->
-
-</head>
 <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
 
-      <noscript>
-        <p>В браузере отключен javascript!</p>
-    </noscript>
+@@include('../components/noscript/noscript.html')
 
-    <div class="container">
+<div class="container">
         
-@@include('./components/header/header.html')
+@@include('../components/header/header.html',{
+    "class" : "slider-fix"
+})
 
-    <div class="slider">
-        
-        <ul>
-            <li>
-                <img src="images/bg_1920.jpg" height="810" width="1920" alt="1">
-            </li>
-            <li>
-                <img src="images/slider-priroda1.jpg" height="810" width="1920" alt="2">
-            </li>
-            <li>
-                <img src="images/slider-priroda2.jpg" height="810" width="1920" alt="3">
-            </li>
-            <li>
-                <img src="images/slider-priroda3.jpg" height="810" width="1920" alt="4">
-            </li>
-            <li>
-                <img src="images/slider-priroda4.jpg" height="810" width="1920" alt="5">
-            </li>
-        </ul>
+@@include('../components/slider/slider.html')
 
-        <div class="slider__nav">
-            <a href="#" class="slider__btn slider__btn--prev"></a>
-            <a href="#" class="slider__btn slider__btn--next"></a>
-        </div>
-        
-    </div>
+@@include('../components/advantages/advantages.html')
 
-    <section>
-
-        <div class="slide__desc">
-            <h4>Санаторий Пятигорска</h4>
-            <p>Показательный пример - геометрическая прогрессия стабилизирует нормальный тетрахорд. Поле направлений реально дает двойной интеграл.</p>
-            <div class="al-r">
-                <a href="#" class="button button--blue">Подробнее</a>
-            </div>
-        </div>
-
-
-<div class="adv">
-    <a class="adv__container adv__container--circle">
-        <div class="adv__desc adv__desc--first"></div>
-        <p>Индивидуальный подход к каждому гостю</p>
-    </a>
-    <a class="adv__container adv__container--circle">
-        <div class="adv__desc adv__desc--two"></div>
-        <p>Бесплатная отмена брони</p>
-    </a>
-    <a class="adv__container adv__container--circle">
-        <div class="adv__desc adv__desc--three"></div>
-        <p>Бесплатный трансфер</p>
-    </a>
-    <a class="adv__container adv__container--circle">
-        <div class="adv__desc adv__desc--fourth"></div>
-        <p>Официальные цены санаториев</p>
-    </a>
-</div>
-
-<link rel="stylesheet" href="_advantages.scss" />
-
-
-    </section>
 
         <div class="tabs">
             <ul>
@@ -577,107 +499,12 @@
         
     </section>
 
-<footer>
-        <div class="footer">
-            <div class="logo">
-                <div class="logo logo__img">
-                    <img src="images/logo.png" alt="kurort-logistik">
-                </div>
-                <div class="logo logo__social">
-                    <a href="#" class="social social--fb"></a>
-                    <a href="#" class="social social--tw"></a>
-                    <a href="#" class="social social--vk"></a>
-                    <a href="#" class="social social--od"></a>
-                </div>
-            </div>
-            <div class="advice">
-                <div class="f__title">
-                    <h6>Консультации по всем вопросам</h6>
-                </div>
-                <div class="advice__phone">
-                    8 (800) <span>767-98-76</span>
-                </div>
-                <div class="advice__buttons">
-                    <p>
-                       <a href="#" class="button button--width-fix button--blue">Заказать звонок</a>
-                       <a href="#" class="advice__link">Задать вопрос</a> 
-                   </p>
-                   <p>
-                       <a href="#" class="button button--width-fix button--green">Забронировать</a>
-                       <a href="#" class="advice__link">Написать отзыв</a> 
-                   </p>
-               </div>
-           </div>
-           <div class="f__lists">
-                <div class="f__list">
-                    <div class="f__title">
-                        <h6>Компания</h6>
-                    </div>
-                    <ul>
-                        <li><a href="#">Документы</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Акции</a></li>
-                        <li><a href="#">Услуги</a></li>
-                    </ul>
-                </div>
-                <div class="f__list">
-                    <div class="f__title">
-                        <h6>Санатории</h6>
-                    </div>
-                    <ul>
-                        <li><a href="#">Пятигорск</a></li>
-                        <li><a href="#">Кисловодск</a></li>
-                        <li><a href="#">Ессентуки</a></li>
-                        <li><a href="#">Железноводск</a></li>
-                    </ul>
-                </div>
-                <div class="f__list">
-                    <div class="f__title">
-                        <h6>Горный отдых</h6>
-                    </div>
-                    <ul>
-                        <li><a href="#">Архыз</a></li>
-                        <li><a href="#">Тиберда</a></li>
-                        <li><a href="#">Домбай</a></li>
-                        <li><a href="#">Приэльбрус</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="f__copyright">
-            <div class="f__wrap">
-                <span>Имеются противопоказания. Необходима консультация специалистов</span>
-                <span class="copyright fl-r">Разработка сайта — WebElement</span>
-            </div>
-        </div>
-    </footer>
+@@include('../components/footer/footer.html')
 
     </div>
 </div>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-  </script>
 
-  <!-- build:js scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
-  
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:js scripts/main.js -->
-<script src="scripts/main.js"></script>
-  <!-- endbuild -->
-
-  <!-- build:js scripts/vendor.js -->
-<script src="scripts/jquery-ui.js"></script>
-<!-- endbuild -->
+@@include('../components/scripts/scripts.html')
 
 
 <script>

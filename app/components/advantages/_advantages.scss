@@ -2,58 +2,76 @@
     position: relative;
     margin: 0 auto;
     max-width: 1024px;
+    // height: 250px;
     @include e('separator') {
         position: absolute;
         right: -20px;
         height: 90px;
         border-left: 3px solid rgba(0, 0, 0, 0.07);
         top: 25%;
-  }
+    }
 
-  @include e('container') {
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    height: 186px;
-    width: 186px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 30px;
+    @include e('container') {
+        cursor: pointer;
+        height: 186px;
+        width: 186px;
+        display: inline-block;
+        position: relative;
+        // margin: 50px 30px 0;
+        margin: 0 30px;
+        transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s;
+        vertical-align: top;
+        &:hover {
+            margin-top: 0;
+            text-decoration: none;
 
-    @include m('circle') {
-     border-radius: 93px;
-     background-color: rgba(255, 255, 255, 0.75);
-     & > * {
-      width: 75%;
-  }
-}
+            .adv__desc {
+                background-size: 420px 93px;
+                &--first {background-position: 14px 15px;}
+                &--two {background-position: -97px 15px;}
+                &--three {background-position: -209px 15px;}
+                &--fourth {background-position: -325px 15px;}
+            }
+        }
 
-@include m('bold') {
-    font-weight: bold;
-    line-height: 1.4em;
-    width: 205px;
-    margin: 0 20px;
-}
+        @include m('circle') {
+            border-radius: 93px;
+            background-color: rgba(255, 255, 255, 0.75);
+            & > * {
+                width: 75%;
+            }
+            &:hover {
+                background-color: #fff;
+            }
+        }
 
-& > * {
-    margin: 0 auto;
-}
-}
+        @include m('bold') {
+            font-weight: bold;
+            line-height: 1.4em;
+            width: 205px;
+            padding: 0 20px;
+            margin: 0;
+        }
 
-p {
-    text-align: center;
-    font-size: 16px;
-    color: $clr-gray-text;
-}
+        & > * {
+            margin: 0 auto;
+        }
+    }
 
-@include e('desc') {
-    height: 115px;
-    width: 90px;
-    background: url(/images/icons-big.png) 0px 0px no-repeat;
+    p {
+        text-align: center;
+        font-size: 16px;
+        color: $clr-gray-text;
+    }
 
-    @include m('first') {background-position: 17px 22px;}
-    @include m('two') {background-position: -80px 22px;}
-    @include m('three') {background-position: -177px 22px;}
-    @include m('fourth') {background-position: -280px 22px;}
-}
+    @include e('desc') {
+        height: 115px;
+        width: 96px;
+        background: url(/images/icons-big.png) 0px 0px no-repeat;
+
+        @include m('first') {background-position: 20px 22px;}
+        @include m('two') {background-position: -77px 22px;}
+        @include m('three') {background-position: -174px 22px;}
+        @include m('fourth') {background-position: -277px 22px;}
+    }
 }

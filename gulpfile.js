@@ -2,11 +2,21 @@
 'use strict';
 // generated on 2015-06-09 using generator-gulp-webapp 0.3.0
 var gulp = require('gulp');
-
+var fileinclude = require('gulp-file-include');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var urlAdjuster = require('gulp-css-url-adjuster');
+
+gulp.task('fileinclude', function() {
+  console.log('include');
+  gulp.src(['app/template/*.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      // basepath: '@file'
+    }))
+    .pipe(gulp.dest('app'));
+});
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
@@ -80,7 +90,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], function () {
+gulp.task('serve', ['fileinclude', 'styles', 'fonts'], function () {
   browserSync({
     notify: false,
     port: 9000,
@@ -94,12 +104,17 @@ gulp.task('serve', ['styles', 'fonts'], function () {
 
   // watch for changes
   gulp.watch([
+    'app/components/**/*.html',
+    'app/template/*.html',
     'app/*.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/components/**/*.html', ['fileinclude']);
+  gulp.watch('app/template/*.html', ['fileinclude']);
+  gulp.watch('app/components/**/*.{scss,sass}', ['styles']);
   gulp.watch('app/styles/**/*.{scss,sass}', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -122,7 +137,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'styles', 'images', 'fonts', 'extras', 'jshint'], function () {
+gulp.task('build', ['fileinclude', 'html', 'styles', 'images', 'fonts', 'extras', 'jshint'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

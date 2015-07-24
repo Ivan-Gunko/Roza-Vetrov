@@ -1,0 +1,122 @@
+<div class="reservation @@modify">
+    <form action="#">
+        <p>
+            Если вы не определились с выбором конкретного санатория, выберите то, что для вас важно и<br> наши менеджеры подберут подходящие для вас варианты
+        </p>
+        <div class="reserve__block reserve__block--inline33">
+            <label for="select1">По профилю</label>
+            <select placeholder="Выберете категорию" name="select1" multiple="multiple" id="opt-category" class="chosen-select">
+
+                <option value="1" title="SPA" name="spa">SPA</option>
+                <option value="2"  title="Аллергология">Аллергология</option>
+                <option value="3"  title="ЖКТ">ЖКТ</option>
+                <option value="4"  title="Общеоздоровительная">Общеоздоровительная</option>
+                                    <!-- <option value="5"  title="Желудочно-кишечный тракт">Желудочно-кишечный тракт</option>
+                                    <option value="6"  title="Желчевыводящая система">Желчевыводящая система</option>
+                                    <option value="7"  title="Заболевание печени">Заболевание печени</option>
+                                    <option value="8"  title="Зрительная система">Зрительная система</option>
+                                    <option value="9"  title="Иммунная система">Иммунная система</option>
+                                    <option value="10" title="Костно-мышечная система">Костно-мышечная система</option>
+                                    <option value="11" title="Лимфатическая система">Лимфатическая система</option>
+                                    <option value="12" title="ЛОР">ЛОР</option>
+                                    <option value="13" title="Мочеполовая система">Мочеполовая система</option>
+                                    <option value="14" title="Нервная система">Нервная система</option>
+                                    <option value="15" title="Обмен веществ">Обмен веществ</option>
+                                    <option value="16" title="Общетерапивтический">Общетерапивтический</option>
+                                    <option value="17" title="Опорно-двигательная система">Опорно-двигательная система</option>
+                                    <option value="18" title="Педиатрия">Педиатрия</option>
+                                    <option value="19" title="Пищеварительная система">Пищеварительная система</option>
+                                    <option value="20" title="Покровная система">Покровная система</option>
+                                    <option value="21" title="Сахарный диабет">Сахарный диабет</option>
+                                    <option value="22" title="Сердечно-сосудистая система">Сердечно-сосудистая система</option>
+                                    <option value="23" title="Урология">Урология</option>
+                                    <option value="24" title="Эндокринная система">Эндокринная система</option> -->
+                                </select>
+                            </div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="range__slider">По цене за сутки, руб</label>
+                                <input type="text" id="range__slider" name="range__slider" value="" />
+                            </div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="city">Выберите город</label>
+                                <select name="city" id="city" class="chosen-select">
+                                    <option>Все города</option>
+                                    <option>Пятигорск</option>
+                                    <option>Кисловодск</option>
+                                    <option>Ессентуки</option>
+                                    <option>Железноводск</option>
+                                </select>
+                            </div>
+                            <div class="row__separator"></div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="sanatorium">Выберете санаторий</label>
+                                <select placeholder="Выберете категорию" name="sanatorium" id="sanatorium" class="chosen-select">
+                                    <option>Пятигорский нарзан</option>
+                                    <option>Кисловодск</option>
+                                    <option>Ессентуки</option>
+                                    <option>Железноводск</option>
+                                </select>
+                            </div>
+                            <div class="reserve__block reserve__block--inline67">
+                                <div class="reserve__desc clearfix">
+                                    <img src="images/sanatorium-news.jpg" alt="foto" class="img--border fl-l">
+                                    <h4>Санаторий Пятигорский Нарзан</h4> 
+                                    <p>                                          
+                                        <span class="desc__cost">от 4000 руб./сутки</span><br>
+                                        <span class="desc__feedback"><a href="#">Читать отзывы</a> (16)</span>
+                                    </p>
+                                    <p class="desc__tags">
+                                        Лечение по направлениям:
+                                        <a href="#">Санаторно-курортное</a>,
+                                        <a href="#">Аллерголоия</a>,
+                                        <a href="#">Гинекология</a>,
+                                        <a href="#">Дыхательная Система</a>,
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row__separator"></div>
+                            <div class="reserve__block reserve__block--inline33">
+                                <label for="datepicker">Дата заезада/выезда</label>
+                                <input type="text" id="datepicker1" name="datepicker1">
+                                <input type="text" id="datepicker2" name="datepicker2">
+                            </div>
+                            <div class="reserve__block reserve__block--inline28">
+                                <label for="apartaments">Тип номера</label>
+                                <select placeholder="Выберете номер" name="apartaments" id="apartaments" class="chosen-select">
+                                    <option>Пятизвездочный</option>
+                                    <option>Люкс</option>
+                                    <option>Полулюкс</option>
+                                    <option>Бизнесс-класс</option>
+                                </select>
+                            </div>
+                            <div class="reserve__block reserve__block--inline38">
+                                <div class="input__wrap">
+                                    <label for="parents">Взрослых</label>
+                                    <input type="text" id="parents" name="parents" class="input__number">
+                                </div>
+                                <div class="input__wrap">
+                                    <label for="shilds">Детей, до 14 лет</label>
+                                    <input type="text" id="shilds" name="shilds" class="input__number">
+                                </div>
+                            </div>
+                            <div class="row__separator"></div>
+                            <p class="reserve__person">Контактные данные</p>
+                            <div class="reserve__block reserve__block--inline33">
+                                <input type="text" id="name" name="name" placeholder="Как вас зовут?" class="input__columm">
+                                <label for="name" class="hide"></label>
+                                <input type="text" id="phone" name="phone" placeholder="Номер телефона" class="input__columm">
+                                <label for="phone" class="hide"></label>
+                                <input type="text" id="e-mail" name="e-mail" placeholder="E-mail" class="input__columm">
+                                <label for="e-mail" class="hide"></label>
+                            </div>
+                            <div class="reserve__block reserve__block--inline67">
+                                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+                            </div>
+                            <div class="row__separator"></div>
+                            <div class="reserve__block reserve__block--inline33"></div>
+                            <div class="reserve__block reserve__block--inline67">
+                                <button type="submit" class="button button--green">Запросить расчет</button>
+                            </div>
+                        </form>
+                    </div>
+            

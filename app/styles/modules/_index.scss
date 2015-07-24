@@ -8,6 +8,10 @@
     border-radius: 15px;
     box-sizing: border-box;
     color: $clr-text;
+    transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s;
+    &:hover {
+    	background-color: #fff;
+    }
 
     h4 {
     	line-height: 2em;
@@ -26,6 +30,8 @@
 	background: $clr-bg url(/images/bg2.png) 0 0 no-repeat;
 	border-top: 2px solid #fff;
 	padding: 35px 0 50px 0;
+	position: relative;
+	z-index: 50;
 
 	@include e('wrap') {
 		@extend .align-center;
@@ -43,6 +49,7 @@
 		border-radius: 5px;
 		text-align: left;
 		margin-bottom: 15px;
+		margin-left: -4px;
 
 		@include m('border') {
 			border: 2px solid #fff;
@@ -65,6 +72,10 @@
 
 		@include m('p25') {
 			padding: 25px;
+		}
+
+		h1 {
+			font-size: 1.8em;
 		}
 	}
 
@@ -148,20 +159,27 @@
 
 	@include e('link') {
 		border-bottom: 	1px solid $clr-green-active;
-		
+
+		@include m('fix') {
+			display: inline-block;
+			max-width: 150px;
+		}
+				
 
 		&:hover {
 			border: 0;
 			text-decoration: none;
+			// border-bottom: 	1px solid #fff;
 		}
 
 		@include m('blue') {
 			border-color: $clr-blue;
+			position: inherit;
 		}
 	}
 
 	@include e('cost') {
-		padding: 15px 5px 10px 20px;
+		padding: 15px 5px 10px 15px;
 		color: 	#2e3e41;
 
 		@include m('san') {
@@ -175,6 +193,8 @@
 		
 		li {
 			padding: 10px 0;
+			position: relative;
+			height: 1em;
 		}
 
 		span {
@@ -230,7 +250,7 @@
 	margin-top: 20px;
 	text-align: left;
 	vertical-align: top;
-	width: 49%;
+	width: 48%;
 	&:nth-child(odd) {
 			margin-right: 10px;
 		}
@@ -253,7 +273,7 @@
 	}
 
 	@include e('content') {
-		padding: 15px 25px;
+		padding: 15px 20px;
 		color: $clr-gray-text;
 
 		h6 {
@@ -265,8 +285,8 @@
 			ul {
 				display: inline-block;
 				vertical-align: top;
-				&:nth-child(even) {
-					padding-left: 20px;
+				&:first-child {
+					padding-right: 10px;
 				}
 			}
 
@@ -278,7 +298,11 @@
 		}
 
 		@include m('small') {
-			padding: 15px;
+			padding: 15px 10px 15px 15px;
+
+			ul {
+				padding-right: 0;
+			}
 		}
 
 		@include m('info') {

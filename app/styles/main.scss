@@ -10,10 +10,7 @@
 
 /* modules */
 // @import "modules/header";
-@import "modules/slider";
 @import "modules/carousel";
-@import "modules/faq";
-@import "modules/questions";
 @import "modules/paginator";
 @import "modules/map";
 @import "modules/select";
@@ -21,9 +18,11 @@
 
 /*pages*/
 @import "modules/index";
-@import "modules/reservation";
 @import "modules/sanatorium-main";
 @import "modules/sanatorium";
+@import "modules/faq";
+@import "modules/questions";
+
 
 /*vendor*/
 @import "vendor/jquery-ui/datepicker";
@@ -35,6 +34,8 @@
 @import "../components/advantages/advantages";
 @import "../components/header/header";
 @import "../components/footer/footer";
+@import "../components/slider/slider";
+@import "../components/form/reservation";
 
 
 
@@ -58,13 +59,13 @@ html {
     font-size: 15px;
 }
 body {
-    // background: #fff url(/images/test_index.jpg) 352px 0 no-repeat;
     font-family: "Arial Regular", arial;
     min-height: 808px;
     min-width: 1024px;
     width: 100%;
     color: $clr-text-default;
     background-color: $clr-body;
+    -webkit-text-size-adjust: auto;
 }
 img {
     max-width: 100%;
@@ -111,7 +112,7 @@ p {
 }
 input[type="text"] {
     height: 34px;
-    padding: 3px 10px;
+    padding: 3px 7px;
     box-sizing: border-box;
 }
 
@@ -137,5 +138,7 @@ visibility: hidden;
 .clearfix {
 *zoom: 1;
 }
-
-
+.slider-fix {
+    position: absolute;
+    width: 100%;
+}
