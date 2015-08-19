@@ -1,0 +1,64 @@
+.rewiew {
+	@include e(block) {
+		margin: 20px 0;
+	}
+
+	@include e('name') {
+		line-height: 2.5em;
+	}
+
+	@include e('date') {
+		color: $clr-text-gray;
+		padding: 0 5px;
+	}
+
+	@include e('text') {
+		background-color: $clr-rewiews;
+		padding: 25px;
+		border-radius: 5px;
+		margin-top: 15px;
+		line-height: 1.3em;
+		position: relative;
+		&:after {
+			border: 20px solid rgba(0, 0, 0, 0);
+			border-left: 20px solid $clr-rewiews;
+			content: '';
+			height: 0;
+			position: absolute;
+			top: -20px;
+			width: 0;
+		}
+	}
+
+	@include e('stars') {
+		margin: 10px 0;
+		background:transparent url('/images/stars.png') 0 0 repeat-x;
+		height: 16px;
+		width: 105px;
+		position: relative;
+	}
+
+	@include e('rate') {
+		position: absolute;
+		height: 16px;
+		width: 105px;
+		background: transparent url('/images/stars.png') 0 -17px repeat-x;
+
+		@include m('1') {width: 20px;}
+		@include m('2') {width: 40px;}
+		@include m('3') {width: 60px;}
+		@include m('4') {width: 85px;}
+	}
+
+	@include e('link') {
+		margin-left: 35px;
+		a {
+			border-bottom: 1px dashed $clr-green-medium;
+		}
+		a:hover, a:focus {
+			text-decoration: none;
+			border-bottom: 0;
+		}
+	}
+
+}

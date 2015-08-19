@@ -1,0 +1,92 @@
+.txt {
+	color: $clr-text-default;
+	padding: 25px; 
+	p {
+		line-height: 1.3em
+	}
+
+	h1, h2, h3 {
+		line-height: 2em;
+	}
+
+	@include e('underline') {
+		border-bottom: 1px solid $clr-green-medium;
+		a, a:hover, a:focus{
+			text-decoration: none;
+		}
+
+		&:hover, &:focus {
+			border-bottom: 0;
+		}
+	}
+	@include e('list') {
+		font-size: 13px;
+		padding-left: 30px;
+		li {
+			line-height: 1.3em;
+			padding: 7px 0;
+			text-indent: -28px;
+			&:before {
+				color: #40ad8b;
+				content: '▶';
+				padding-right: 15px;
+			}
+		}
+	}
+
+	@include e('table') {
+		display: table;
+		font-size: 14px;
+		margin: 0 -25px;
+	}
+
+	@include e('row') {
+		background-color: $clr-table-row;
+		cursor: pointer;
+		line-height: 43px;
+		&:hover {
+			background-color: $clr-table-row -#001;
+		}
+
+		@include m('caption') {
+			&, &:hover {
+				background-color: $clr-table-caption;
+			}
+		}
+	}
+
+	@include e('cell') {
+		box-sizing: border-box;
+		display: table-cell;
+		padding-left: 20px;
+		width: 165px;
+
+		@include m('main') {
+			font-weight: bold;
+			width: 235px;
+		}
+	}
+
+	@include e('note') {
+		margin: 10px 0;
+		padding: 0 0 0 20px;
+		border-left: 2px solid $clr-note;
+	}
+
+	@include e('img') {
+		width: 670px;
+		height: 190px;
+		border-radius: 5px;
+		background-color: $clr-img;
+
+		img {
+			border-radius: 5px;
+			max-height: 100%;
+			margin: auto;
+		}
+	}
+
+	@include e('wrapper') {
+		margin: 30px 0;
+	}
+}

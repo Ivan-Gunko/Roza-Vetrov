@@ -22,6 +22,8 @@
 @import "modules/sanatorium";
 @import "modules/faq";
 @import "modules/questions";
+@import "modules/txt";
+@import "modules/rewiews";
 
 
 /*vendor*/
@@ -87,19 +89,19 @@ h1, h2, h3, h4, h5 {
     line-height: 1.5em;
 }
 h1 {
-    font-size: 44px;
+    font-size: 28px;
 }
 h2 {
-    font-size: 38px;
+    font-size: 22px;
 }
 h3 {
-    font-size: 32px;
+    font-size: 18px;
 }
 h4 {
-    font-size: 26px;
+    font-size: 16px;
 }
 h5 {
-    font-size: 22px;
+    font-size: 14px;
 }
 
 hr {
